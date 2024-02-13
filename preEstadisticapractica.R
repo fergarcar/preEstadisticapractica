@@ -152,3 +152,24 @@ print(varianza)
 #9
 desviacion_estandar <- sd(num_cuentas)
 print(desviacion_estandar)
+
+#10
+hist(num_cuentas, main = "Histograma",
+     xlab = "Cuentas en yacimiento", ylab = "Frecuencia")
+
+#11
+plot (num_cuentas, main = "Diagrama",
+      ylab = "Cuentas por yacimiento")
+
+#12
+dx <- density(num_cuentas)
+
+lines(dx, lwd = 2, col = "red")
+
+plot(dx, lwd = 2, col = "red",
+     main = "Densidad")
+rug(jitter(num_cuentas))
+
+#13
+barplot(table(num_cuentas), main = "Grafico de barras",
+        xlab = "Cuentas en yacimiento", ylab = "Frecuencia")
