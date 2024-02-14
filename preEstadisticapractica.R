@@ -192,4 +192,9 @@ periodo_cultura <- c("Neolitico", "Paleolitico", "Romano", "Islamico", "Moderno"
 estado_de_conservacion <- c ("Excelente", "Bueno", "Decente", "Deficiente", "Deplorable")
 ubicacion_del_artefacto <- c("Localizacion A", "Localizacion B", "Localizacion C", "Localizacion D", "Localizacion E")
 
+table(tipo_de_artefacto)
+table(material)
+table(periodo_cultura)
+table(estado_de_conservacion)
+table(ubicacion_del_artefacto)
 
