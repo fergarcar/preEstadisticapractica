@@ -62,11 +62,18 @@ print (mi_lista)
 ###El motivo de la transformacion es como se ha mencionado, por cuestion de ser mas preciso double y a la hora de representarlos es mas fiable
 
 #12
-
+is.na(mi_lista)
 
 #13
+z <- c(29, NA, 12, 46, 73)
 
 #14
+mean(z)
+#no puede salir una media porque dentro del vector existe NA, es decir, que no tiene ningun valor asignado, asi que no puede hacer la media del resto de valores
+##esto se podria solucionar cambiando el NA por otro valor numerico
+
+z<- c(29,32,12,46,73)
+mean (z)
 
 #15
 matriz <- matrix(c(24,69,3,90,23,56,1,63,87,21,77,19),
@@ -97,7 +104,7 @@ resta_matriz <- a-b
 print(suma_matriz)
 print(resta_matriz)
 
-##El resultado obtenido es que en las lineas y columnas nos salen el numero nueve en negativo, el motivo de esto
+##El resultado obtenido es que en las lineas y columnas nos salen el numero nueve en negativo, el motivo de esto es porque al restar a la columna A los elementos de la columna B, sale negativo
 
 #19
 matriz_1 <- matrix(matriz, nrow = nrow(matriz), ncol = 4,
@@ -106,14 +113,18 @@ matriz_1 <- matrix(matriz, nrow = nrow(matriz), ncol = 4,
 
 #20
 matriz_multiplicada <- matriz*2
+print(matriz_multiplicada)
 
 #21
 matriz_mult <- a*b
 print (matriz_mult)
 
 #22
-matriz_mult["2,"]
+matriz_mult[2,3]
 
+matriz_mult[2,]
+
+matriz_mult[ ,3]
 
 #Generar datos aleatorios de cuentas en un yacimiento
 #1
@@ -154,13 +165,12 @@ desviacion_estandar <- sd(num_cuentas)
 print(desviacion_estandar)
 
 #10
-hist(num_cuentas, main = "Histograma",
+hist(num_cuentas, main = "Histograma", col = "green",
      xlab = "Cuentas en yacimiento", ylab = "Frecuencia")
 
 #11
-plot (num_cuentas, main = "Diagrama",
-      ylab = "Cuentas por yacimiento")
-
+boxplot (num_cuentas, main = "Diagrama", col = "orange",
+         xlab = "Cuentas por yacimiento", ylab = "Frecuencia")
 #12
 dx <- density(num_cuentas)
 
@@ -171,5 +181,15 @@ plot(dx, lwd = 2, col = "red",
 rug(jitter(num_cuentas))
 
 #13
-barplot(table(num_cuentas), main = "Grafico de barras",
+barplot(table(num_cuentas), main = "Grafico de barras", col = "blue",
         xlab = "Cuentas en yacimiento", ylab = "Frecuencia")
+
+#14
+set.seed(123) 
+tipo_de_artefacto <- c("litico", "arma", "oseo", "mueble", "ropa")
+material <- c("madera", "metal", "hueso", "piedra", "tela")
+periodo_cultura <- c("Neolitico", "Paleolitico", "Romano", "Islamico", "Moderno")
+estado_de_conservacion <- c ("Excelente", "Bueno", "Decente", "Deficiente", "Deplorable")
+ubicacion_del_artefacto <- c("Localizacion A", "Localizacion B", "Localizacion C", "Localizacion D", "Localizacion E")
+
+
